@@ -1,44 +1,102 @@
-/* styles.css */
-
-/* ตั้งค่าพื้นหลังของ carousel */
-.carousel-item {
-    height: 400px; /* ความสูงของแบนเนอร์ */
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.carousel-item img {
-    height: 100%; /* ให้ภาพเต็มความสูง */
-    object-fit: cover; /* ปรับการแสดงผลภาพ */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* ตั้งค่าความสูงของ hero section */
-.hero {
-    height: 400px; 
-}
-
-/* ปรับแต่ง text ของ navbar */
+/* Navbar */
 .navbar {
-    background-color: #343a40; /* สีพื้นหลังของ navbar */
+    background-color: #4CAF50;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .nav-link {
-    color: #ffffff; /* สีของลิงก์ */
+.navbar .logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
 }
 
-.navbar .nav-link:hover {
-    color: #f8f9fa; /* สีเมื่อ hover */
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
 }
 
-/* ปรับแต่ง footer */
-footer {
-    background-color: #343a40; /* สีพื้นหลังของ footer */
-    color: #ffffff; /* สีของข้อความใน footer */
+.navbar-links a:hover {
+    color: #ffd700;
 }
 
-/* ปรับแต่ง button */
-.btn-primary {
-    background-color: #007bff; /* สีพื้นหลังของปุ่ม */
+/* Main Content */
+.container {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3; /* สีเมื่อ hover */
+section {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h1, section h2 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+section p {
+    color: #666;
+    line-height: 1.8;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Button Style */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
 }
