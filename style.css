@@ -104,3 +104,9 @@ section p {
         flex: 1 1 100%; /* 1 card ต่อแถว */
     }
 }
+
+.toast {
+    background-color: #343a40;
+    color: white;
+}
+
