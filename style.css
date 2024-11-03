@@ -85,18 +85,3 @@ section p {
 .footer p {
     margin: 0;
 }
-
-/* Button Style */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #45a049;
-}
