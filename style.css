@@ -12,39 +12,40 @@ body {
     line-height: 1.6;
 }
 
+/* Container */
 .container {
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: auto;
 }
 
+/* Section Styles */
 section {
     padding: 2rem;
     margin-bottom: 2rem;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* จัดให้อยู่กลาง */
 }
 
 section h1, section h2 {
     color: #4CAF50;
     margin-bottom: 1rem;
-    text-align: center;
     font-weight: 600;
 }
 
 section p {
     color: #666;
     line-height: 1.8;
-    text-align: center;
     font-size: 1.1rem;
 }
 
 /* Card Styles */
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    display: flex; /* ใช้ Flexbox */
+    flex-wrap: wrap; /* ให้ card ขยายไปในแนวนอน */
+    justify-content: space-between; /* จัดให้ card ห่างกัน */
     margin-top: 2rem;
 }
 
@@ -55,6 +56,8 @@ section p {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(25% - 20px); /* ให้ card กว้าง 25% ของพื้นที่ */
+    margin: 10px; /* กำหนดระยะห่าง */
 }
 
 .card:hover {
@@ -74,6 +77,7 @@ section p {
     margin-bottom: 20px;
 }
 
+/* Button Styles */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -88,3 +92,15 @@ section p {
     background-color: #388E3C;
 }
 
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* 2 card ต่อแถว */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* 1 card ต่อแถว */
+    }
+}
