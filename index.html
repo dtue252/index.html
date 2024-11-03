@@ -48,7 +48,7 @@
                     <div class="card-body">
                         <h5 class="card-title">บริการ 1</h5>
                         <p class="card-text">รายละเอียดบริการที่ 1 อย่างย่อ</p>
-                        <a href="javascript:void(0);" class="btn btn-primary" onclick="showAlert()">ดูเพิ่มเติม</a>
+                        <a href="#" class="btn btn-primary">ดูเพิ่มเติม</a>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                     <div class="card-body">
                         <h5 class="card-title">บริการ 2</h5>
                         <p class="card-text">รายละเอียดบริการที่ 2 อย่างย่อ</p>
-                        <a href="javascript:void(0);" class="btn btn-primary" onclick="showAlert()">ดูเพิ่มเติม</a>
+                        <a href="#" class="btn btn-primary">ดูเพิ่มเติม</a>
                     </div>
                 </div>
             </div>
@@ -72,7 +72,7 @@
                     <div class="card-body">
                         <h5 class="card-title">บริการ 3</h5>
                         <p class="card-text">รายละเอียดบริการที่ 3 อย่างย่อ</p>
-                        <a href="javascript:void(0);" class="btn btn-primary" onclick="showAlert()">ดูเพิ่มเติม</a>
+                        <a href="#" class="btn btn-primary">ดูเพิ่มเติม</a>
                     </div>
                 </div>
             </div>
@@ -84,9 +84,22 @@
                     <div class="card-body">
                         <h5 class="card-title">บริการ 4</h5>
                         <p class="card-text">รายละเอียดบริการที่ 4 อย่างย่อ</p>
-                        <a href="javascript:void(0);" class="btn btn-primary" onclick="showAlert()">ดูเพิ่มเติม</a>
+                        <a href="#" class="btn btn-primary">ดูเพิ่มเติม</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="position-fixed top-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">การแจ้งเตือน</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                กำลังเข้าสู่หน้ารายละเอียด...
             </div>
         </div>
     </div>
@@ -94,6 +107,25 @@
     <div id="footer-placeholder"></div>
 
     <script>
+        // Function to show toast notification
+        function showToast() {
+            const toastEl = document.getElementById('liveToast');
+            const toast = new bootstrap.Toast(toastEl);
+            toast.show();
+        }
+
+        // Add event listeners to buttons
+        document.querySelectorAll('.btn-primary').forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default action
+                showToast(); // Show toast notification
+                setTimeout(() => {
+                    // Redirect to details page after toast is shown
+                    window.location.href = "#"; // Replace with actual details page URL
+                }, 2000); // Adjust time as needed
+            });
+        });
+
         fetch('navbar.html')
             .then(response => response.text())
             .then(data => {
@@ -104,12 +136,6 @@
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
             });
-
-        function showAlert() {
-            alert("กำลังเข้าสู้หน้ารายละเอียด");
-            // ที่นี่คุณสามารถเพิ่มการนำทางไปยังหน้ารายละเอียดได้
-            // window.location.href = 'url_to_detail_page';
-        }
     </script>
 
 </body>
