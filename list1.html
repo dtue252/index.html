@@ -9,36 +9,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
     <style>
-        body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-}
-
-.header, .footer {
-    background-color: #ffffff;
-    padding: 15px 0;
-}
-
-.product-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.product-price {
-    font-size: 20px;
-    color: #dc3545; /* red color */
-    margin-bottom: 15px;
-}
-
-.product-description {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    margin-right: 10px;
-}
             #toast-container {
             position: fixed;
             bottom: 20px; /* ระยะห่างจากด้านล่าง */
@@ -59,7 +29,7 @@
             <div class="col-md-6">
                 <h2 class="product-title">จิตวิทยาสายดาร์ก</h2>
                 <p class="product-price">ราคา: 212.50 บาท</p>
-                <p class="product-description">รายละเอียด: หนังสือเล่มนี้จะพาคุณไปสำรวจด้านมืดของจิตวิทยา และวิธีการใช้ความรู้เหล่านี้ในการดำเนินชีวิตประจำวัน...</p>
+                <p class="product-description">รายละเอียด: ผู้เขียน: Dr.Hiro  สำนักพิมพ์: วีเลิร์น (WeLearn) หมวดหมู่: จิตวิทยา การพัฒนาตัวเอง , การพัฒนาตัวเอง how to</p>
                 <button class="btn btn-success" onclick="placeOrder()">สั่งซื้อ</button>
                 <button onclick="history.back()" class="btn btn-secondary">ย้อนกลับ</button>
             </div>
@@ -73,12 +43,12 @@
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
-                กำลังเข้าสู่หน้ารายละเอียด...
+                สั่งซื้อสำเร็จ
             </div>
         </div>
     </div>
 
-    <div id="footer-placeholder"></div>
+    <div id="footer-placeholder" class="mt-5"></div>
 
     <script>
         function showToast() {
